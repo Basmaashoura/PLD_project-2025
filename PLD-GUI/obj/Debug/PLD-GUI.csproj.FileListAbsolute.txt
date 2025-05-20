@@ -1,0 +1,13 @@
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\bin\Debug\PLD-GUI.exe.config
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\bin\Debug\PLD-GUI.exe
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\bin\Debug\PLD-GUI.pdb
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\bin\Debug\CalithaLib.dll
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\bin\Debug\GoldParserEngine.dll
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD-GUI.csproj.AssemblyReference.cache
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD_GUI.Form1.resources
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD_GUI.Properties.Resources.resources
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD-GUI.csproj.GenerateResource.cache
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD-GUI.csproj.CoreCompileInputs.cache
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD-GUI.csproj.CopyComplete
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD-GUI.exe
+C:\Users\basma\OneDrive\Desktop\pld-project\PLD-GUI\obj\Debug\PLD-GUI.pdb
