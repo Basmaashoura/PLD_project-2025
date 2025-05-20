@@ -1,0 +1,67 @@
+"Start Symbol" = <Main>
+!----------- Character set ----------
+{Head}      = {Letter} + [_]
+{Tail}      = {digit} + [_]  
+{Value}     = {Alphanumeric}
+{WS}           = {Whitespace} - {CR} - {LF}
+                                                    
+!------------- Terminal -------------
+identifier    = {Head}{Tail}*
+value = {Value}
+Whitespace    = {WS}+
+NewLine       = {CR}{LF} | {CR} | {LF}
+
+!-------------- Rules ---------------
+<Main> ::= <Stmt_list>
+        
+<Stmt_list> ::= <Stmt> 
+             | <Stmt> <Stmt_list>
+
+<Stmt> ::= <Var_initialization>
+        | <Assignment>
+        | <If_condition>
+        | <For_loop>
+        | <While_loop> 
+        
+!------------- initialization -------------
+<Var_initialization> ::= 'var 'identifier'='<Value_Exp>                
+<Assignment> ::= identifier '=' <Value_Exp>
+              
+!------------- condition -------------
+<If_condition> ::= 'is' '(' <cond> ')'':' NewLine <Stmt_list>
+                | 'is' '(' <cond> ')'':' NewLine <Stmt_list> new_line 'else' <Stmt_list>
+                 
+<op> ::= '<' | '>' | '<>' | '=='
+       
+<cond> ::= <Expression> <op> <Expression>
+        
+!--------------- loops --------------- 
+<For_loop> ::= 'fr' <Var_initialization> '#' <cond> '#' <counter> ':' NewLine <Stmt_list>
+<While_loop> ::= 'while' '(' <Expression> ')' ':' NewLine <counter> <Stmt_list>
+              
+<counter> ::= '++'identifier
+            | '--'identifier
+            
+!------------- expressions -------------  
+<Expression>  ::= <Expression> '>'  <Add_Exp>
+               |  <Expression> '<'  <Add_Exp>
+               |  <Expression> '<=' <Add_Exp>
+               |  <Expression> '>=' <Add_Exp>
+               |  <Expression> '==' <Add_Exp>    !Equal
+               |  <Expression> '<>' <Add_Exp>    !Not equal
+               |  <Add_Exp> 
+
+<Add_Exp>     ::= <Add_Exp> '+' <Mul_Exp>
+               |  <Add_Exp> '-' <Mul_Exp>
+               |  <Mul_Exp> 
+
+<Mul_Exp>    ::= <Mul_Exp> '*' <Negate_Exp>
+               |  <Mul_Exp> '/' <Negate_Exp>
+               |  <Negate_Exp> 
+
+<Negate_Exp>  ::= '-' <Value_Exp>
+               |  <Value_Exp>
+
+<Value_Exp>   ::= value
+               |  identifier
+               |  '(' <Expression> ')'
